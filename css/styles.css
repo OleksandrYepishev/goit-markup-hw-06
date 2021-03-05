@@ -290,18 +290,19 @@ img {
   display: inline-block;
   padding: 10px 32px;
   margin-top: 30px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  border: none;
-
-  color: var(--primary-white-color);
-  background-color: var(--accent);
 
   text-decoration: none;
   font-weight: bold;
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.06em;
+
+  color: var(--primary-white-color);
+  background-color: var(--accent);
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: none;
   cursor: pointer;
 }
 
@@ -330,14 +331,15 @@ img {
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms var(--timing-fn);
-  overflow-y: auto;
-  padding: 40px;
 
-  max-width: 528px;
-  width: 100%;
-  min-height: 581px;
+  padding: 40px;
   max-height: 100vh;
+
   background-color: var(--primary-white-color);
+
+  overflow-y: auto;
+
+  pointer-events: auto;
 }
 
 .backdrop.is-hidden .modal {
@@ -347,12 +349,16 @@ img {
 }
 
 .modal-close {
-  display: block;
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   top: 8px;
   right: 8px;
-  padding: 6px;
+  height: 30px;
+  width: 30px;
   margin: 0;
+  padding: 0;
   transition: fill 250ms var(--timing-fn);
 
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -363,15 +369,160 @@ img {
   background: var(--primary-white-color);
 }
 
-/* .icon-close {
-  top: 50%;
-  left: 50%;
-} */
-
 .modal-close:hover,
 .modal-close:focus,
 .modal-close:active {
   fill: var(--accent);
+}
+
+.form-title {
+  margin-top: 0;
+  margin-bottom: 12px;
+
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: var(--title-text-color);
+}
+
+.form-field {
+  margin-bottom: 10px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.form-lable {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+
+  font-size: 12px;
+  line-height: 1.167;
+  letter-spacing: 0.01em;
+  color: var(--primary-text-color);
+}
+
+.form-input {
+  margin-top: 4px;
+  padding: 0;
+  padding-left: 42px;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  transition: fill 250ms var(--timing-fn);
+}
+
+.form-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+
+  color: var(--title-text-color);
+
+  transition: fill 250ms var(--timing-fn);
+}
+
+.form-input:focus {
+  outline: none;
+  border: 1px solid var(--accent);
+}
+
+.form-input:focus + .form-icon {
+  color: var(--accent);
+}
+
+.form-icon {
+  fill: currentColor;
+}
+
+.form-comments {
+  padding: 12px 16px;
+  margin-bottom: 20px;
+  margin-top: 4px;
+
+  height: 120px;
+  font-size: 12px;
+  line-height: 1.167;
+  letter-spacing: 0.01em;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+  color: rgba(117, 117, 117, 0.5);
+
+  transition: fill 250ms var(--timing-fn);
+  resize: none;
+}
+
+.form-comments:focus {
+  outline: none;
+  border: 1px solid var(--accent);
+  color: rgba(33, 33, 33, 1);
+}
+
+.label-checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+
+  font-size: 14px;
+  line-height: 1.714;
+  letter-spacing: 0.03em;
+
+  color: var(--primary-text-color);
+}
+
+.checkbox-icon use {
+  display: none;
+}
+
+.checkbox-icon {
+  margin-right: 7px;
+  border: 2px solid var(--title-text-color);
+  cursor: pointer;
+  transition: fill 250ms var(--timing-fn);
+}
+
+.checkbox-agrement {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+.checkbox-input:checked + .checkbox-icon use,
+.checkbox-input:checked + .checkbox-icon {
+  display: block;
+  border: none;
+}
+
+.modal-btn {
+  display: inline-block;
+  padding: 10px 55px;
+
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.875;
+  letter-spacing: 0.06em;
+
+  border-radius: 4px;
+  border: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: fill 250ms var(--timing-fn);
+
+  color: var(--primary-white-color);
+  background-color: var(--accent);
+}
+
+.modal-btn:focus,
+.modal-btn:hover,
+.modal-btn:active {
+  background-color: #188ce8;
 }
 
 /* секции */
