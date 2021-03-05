@@ -414,7 +414,7 @@ img {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
 
-  transition: fill 250ms var(--timing-fn);
+  transition: border 250ms var(--timing-fn);
 }
 
 .form-icon {
@@ -424,7 +424,7 @@ img {
 
   color: var(--title-text-color);
 
-  transition: fill 250ms var(--timing-fn);
+  transition: color 250ms var(--timing-fn);
 }
 
 .form-input:focus {
@@ -455,7 +455,7 @@ img {
   border-radius: 4px;
   color: rgba(117, 117, 117, 0.5);
 
-  transition: fill 250ms var(--timing-fn);
+  transition: border 250ms var(--timing-fn), color 250ms var(--timing-fn);
   resize: none;
 }
 
@@ -480,13 +480,14 @@ img {
 
 .checkbox-icon use {
   display: none;
+  transition: display 250ms var(--timing-fn);
 }
 
 .checkbox-icon {
   margin-right: 7px;
   border: 2px solid var(--title-text-color);
   cursor: pointer;
-  transition: fill 250ms var(--timing-fn);
+  transition: border 250ms var(--timing-fn);
 }
 
 .checkbox-agrement {
@@ -513,7 +514,7 @@ img {
   border: none;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   cursor: pointer;
-  transition: fill 250ms var(--timing-fn);
+  transition: background-color 250ms var(--timing-fn);
 
   color: var(--primary-white-color);
   background-color: var(--accent);
@@ -851,11 +852,85 @@ img {
 
   font-weight: bold;
   font-size: 14px;
-  line-height: 1.14;
+  line-height: 1.143;
   letter-spacing: 0.03em;
   text-transform: uppercase;
 
   color: var(--primary-white-color);
+}
+
+.form-wrapper {
+  margin-left: 93px;
+  flex-direction: column;
+  display: flex;
+}
+
+.footer-form {
+  display: flex;
+}
+
+.footer-sign {
+  margin-bottom: 20px;
+
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.143;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: var(--primary-white-color);
+  background-color: transparent;
+}
+
+.footer-sign::placeholder {
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.sign-input {
+  width: 358px;
+  padding-left: 16px;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  transition: border 250ms var(--timing-fn);
+
+  background-color: transparent;
+}
+
+.sign-input:focus {
+  outline: none;
+  border: 1px solid var(--accent);
+}
+
+.footer-icon {
+  margin-left: 10px;
+  width: 24px;
+  height: 24px;
+}
+
+.footer-btn {
+  display: flex;
+  align-items: center;
+  padding: 10px 28px;
+  margin-left: 12px;
+
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.875;
+  letter-spacing: 0.06em;
+
+  border: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  cursor: pointer;
+
+  color: var(--primary-white-color);
+  background-color: var(--accent);
 }
 
 /* Страница Портфолио  */
