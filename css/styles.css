@@ -1053,7 +1053,7 @@ img {
   height: 100%;
   background-color: var(--overlay-bg-color);
 
-  transform: translatey(100%);
+  transform: translatey(101%);
   transition: transform 250ms var(--timing-fn);
 }
 
