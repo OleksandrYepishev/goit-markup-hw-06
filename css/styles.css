@@ -882,10 +882,7 @@ img {
   background-color: transparent;
 }
 
-.footer-sign::placeholder {
-  font-size: 16px;
-  line-height: 1.25;
-  letter-spacing: 0.03em;
+.sign-input::placeholder {
   color: rgba(255, 255, 255, 0.6);
 }
 
