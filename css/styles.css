@@ -334,6 +334,7 @@ img {
 
   padding: 40px;
   max-height: 100vh;
+  width: 528px;
 
   background-color: var(--primary-white-color);
 
@@ -388,10 +389,13 @@ img {
 }
 
 .form-field {
-  margin-bottom: 10px;
-
   display: flex;
   flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.form-field.checkbox {
+  margin-bottom: 0;
 }
 
 .form-lable {
@@ -408,8 +412,8 @@ img {
 
 .form-input {
   margin-top: 4px;
-  padding: 0;
-  padding-left: 42px;
+  padding: 12px 42px;
+
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
@@ -486,6 +490,7 @@ img {
 .checkbox-icon {
   margin-right: 7px;
   border: 2px solid var(--title-text-color);
+  border-radius: 2px;
   cursor: pointer;
   transition: border 250ms var(--timing-fn);
 }
@@ -791,6 +796,7 @@ img {
   max-width: 1600px;
   display: flex;
   align-items: baseline;
+  justify-content: space-between;
 }
 
 .logo.footer {
@@ -897,6 +903,7 @@ img {
   transition: border 250ms var(--timing-fn);
 
   background-color: transparent;
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .sign-input:focus {
